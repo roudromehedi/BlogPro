@@ -29,12 +29,14 @@ onMounted(() => {
       </h1>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-5">
         <div v-if="loading" class="col-span-full flex pt-28 justify-center h-screen">
-          <img class="w-56 h-56" src="../../assets/loading%20(2).gif" alt="" />
+          <div>Loading.....</div>
+          >
         </div>
         <section
           v-else
-          v-for="post in catPost"
+          v-for="(post, index) in catPost"
           class="bg-white max-w-sm rounded-lg shadow shadow-white p-2 font-hind ring ring-indigo-200 hover:ring-indigo-500 duration-300"
+          :key="index"
         >
           <PostCard>
             <template #postImage>

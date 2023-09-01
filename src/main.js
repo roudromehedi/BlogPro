@@ -1,4 +1,4 @@
-import './assets/main.css'
+import '../public/assets/main.css'
 import '@fontsource/hind-siliguri'
 import { createApp } from 'vue'
 import App from './App.vue'
